@@ -2,6 +2,7 @@ package ru.itmo.coursework4.entities;
 
 import jakarta.persistence.*;
 
+import javax.validation.constraints.Future;
 import javax.validation.constraints.Min;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class Group {
     private int maxSize;
 
     @Column(name = "ascension_time", nullable = false)
+    @Future
     private LocalDateTime ascensionTime;
 
     public int getId() {
